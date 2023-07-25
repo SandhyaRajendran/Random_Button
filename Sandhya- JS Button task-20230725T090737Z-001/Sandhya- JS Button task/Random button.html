@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onclick name show event</title>
+<html>
+    <head><h3> <u>ON CLICK SHOW EVENT IN NAMES</u></h3>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1 Id="Names"></h1>
+        <button onclick="onclickshow()">Names</button>
+         <script>
+          var a= 0;
+            const name = ["Shivam", "Raja", "Devi", "Sandy", "Moni", "and friends" ]
+            function onclickshow() {
+                let i=0
+                while (i < name.length) {
+                    if (a === i) {
+                        document.getElementById("Names").innerHTML = name[i];
+                    }
+                    i++;
+                }
+                a = a === name.length -1 ? 0 : a+1;
+            }
+        </script>
+    </body>
+</html>
